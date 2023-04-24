@@ -1,0 +1,19 @@
+.app__profile{
+    margin: 15px 0 35px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.app__profile .image{
+    width:80px;
+    height:80px;
+    background-color: blueviolet;
+    clip-path: circle();
+}
+
+.app__profile-info h1{
+    font-size:1.3rem;
+    color:var(--primary-color);
+}
+

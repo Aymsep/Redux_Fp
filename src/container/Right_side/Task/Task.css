@@ -1,0 +1,27 @@
+.app__task{
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.app__task .task{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+    width: 540px;
+    border-radius: 8px;
+    padding: 0 15px;
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+.task #task_time{
+    margin-left:auto;
+}
+
+.task #task_name{
+    text-transform: capitalize;
+}

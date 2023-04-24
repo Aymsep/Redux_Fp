@@ -1,16 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import {Provider} from 'react-redux'
-import store from './redux/store';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import filterReducer from './feauters/Filter'
+import taskReducer from './feauters/tasks'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = configureStore({
+  reducer:{
+    filter:filterReducer,
+    tasks:taskReducer
+  }
+})
+
 root.render(
   <React.StrictMode>
-      <Provider store={store} > 
+    <Provider store={store} >
           <App />
-      </Provider>
+    </Provider>
   </React.StrictMode>
 );
 

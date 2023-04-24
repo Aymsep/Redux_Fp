@@ -1,0 +1,13 @@
+.app__filter{
+    margin: 25px 10px;
+}
+
+.app__filter-list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.app__addFilter{
+    cursor: pointer;
+}

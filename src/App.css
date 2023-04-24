@@ -1,53 +1,166 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  outline: none;
+  border: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__container{
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root{
+  --primary-color:rgb(134, 122, 239);
+}
+
+.app__LeftSide{
+  z-index: 50;
+  padding: 0 20px;
+  background-color: white;
+}
+
+.app__RightSide{
+  background-color: var(--primary-color);
+}
+
+.line{
+  background-color:var(--primary-color); ;
+  height: 3px;
+  width: 60%;
+  margin: 35px auto 115px;
+  display: block;
+}
+
+svg{
+  vertical-align: middle;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.app__headline{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.app__headline span{
+  text-transform: capitalize;
+}
+
+.app__circle{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.circle{
+  width: 10px;
+  height: 10px;
+  clip-path: circle();
+}
+
+.addfilter{
+  padding: 0 !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.app__leftside-set{
+  margin-top: 45px;
+}
+
+.input-right{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 150px;
+  position: relative;
+
+}
+
+.app__RightSide input{
+  height: 50px;
+  width: 600px;
+  border-radius: 8px;
+  padding: 0 76px;
+}
+
+.app__rightside-colors{
+  display: flex;
+  gap: 0;
+  position: absolute;
+  left: 20.3rem;
+  top: 10.6rem;
+}
+
+.app__rightside-addition{
+  display: flex;
+  gap:.5rem;
+  position: absolute;
+  right: 20.4rem;
+  top: 10.3rem;
+}
+
+.delete_svg{
+  color: white;
+  position: absolute;
+  right: 19rem;
+  font-size: 1.5rem;
+
+}
+
+
+.app__edit{
+  border-radius: 8px;
+  margin-top: 15px;
+  padding: 8px;
+  max-width: 540px;
+  background-color: white;
+  height: 150px;
+  animation: showed 1s ;
+  z-index: -1;
+}
+
+@keyframes showed {
+  from{
+    /* height: 50px; */
+    transform: translateX(-550px)
+  }
+  to{
+    /* height: 150px; */
+    transform: translateX(0)
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.app__edit
+
+.edit__bo{
+  border: 2px solid var(--primary-color);
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  gap:15px;
+}
+
+.edit__bo input{
+  background-color: var(--primary-color);
+  width: 500px;
+  padding: 0px 15px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.mtop{
-  margin-top: 80px;
-
-}
-.col-md-3 {
-  flex: 0 0 33.3333333%;
-  max-width: 33.3333333%;
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  display: flex;
+.edit__bo button{
+  padding:8px 25px;
+  background-color: var(--primary-color);
+  color:white;
+  border-radius: 8px;
 }
